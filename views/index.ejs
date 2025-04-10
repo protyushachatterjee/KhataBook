@@ -27,7 +27,12 @@
 
         <div id="page">
             <h3 class="font-medium">All hisaab kitaab</h3>
-            <% files.forEach(function(file){ %>
+            <% if(files.length < 0){ %>
+                <div class="mt-5">
+                    <h5 class="text-gray-400">No hisaab is there.</h5>
+                </div>
+          <%  } else{ %>
+            <% files.forEach(function(file){ %> 
                 <div class="files">
                     <div class="file">
                         <div class="file-1">
@@ -40,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-                <% }) %>
+                <% }) } %>
 
         </div>
 
